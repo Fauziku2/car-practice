@@ -1,5 +1,5 @@
-var Car = function (speed, color, convertible) {
-  this.speed = speed
+var Car = function (color, convertible) {
+  this.speed = 0
   this.color = color
   this.convertible = function (num1, num2) {
     return num1 === num2
@@ -7,12 +7,11 @@ var Car = function (speed, color, convertible) {
 }
 
 Car.prototype.acc = function(num) {
-    return this.speed + num;
+    this.speed += num;
 };
 
-
 Car.prototype.setColor = function(color) {
-    return this.color = color;
+    this.color = color;
 };
 
 // Car.prototype.dec = function(num) {
